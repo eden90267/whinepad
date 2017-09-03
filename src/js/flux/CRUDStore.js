@@ -1,7 +1,7 @@
 // @flow
 
-import {EventEmitter} from 'fbemitter';
-import {List} from 'immutable';
+import { EventEmitter } from 'fbemitter';
+import { List } from 'immutable';
 
 
 let data: List<Object>;
@@ -17,8 +17,10 @@ const CRUDStore = {
       :
       null;
     if (!storage) {
-      let initialRecord = {};
-      schema.forEach(item => initialRecord[item.id] = item.sample);
+      const initialRecord = {};
+      schema.forEach((item) => {
+        initialRecord[item.id] = item.sample;
+      });
       data = List([initialRecord]);
     } else {
       data = List(JSON.parse(storage));

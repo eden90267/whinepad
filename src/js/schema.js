@@ -1,4 +1,4 @@
-import classification from "./classification";
+import classification from './classification';
 
 export default [
   {

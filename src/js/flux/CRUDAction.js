@@ -1,8 +1,7 @@
 // @flow
 
-"use strict";
 
-import CRUDStore from "./CRUDStore";
+import CRUDStore from './CRUDStore';
 
 const CRUDActions = {
 
@@ -19,7 +18,7 @@ const CRUDActions = {
   },
 
   updateField(recordId: number, key: string, value: string | number) {
-    let record = CRUDStore.getData().get(recordId);
+    const record = CRUDStore.getData().get(recordId);
     record[key] = value;
     CRUDStore.setData(CRUDStore.getData().set(recordId, record));
   },
@@ -41,7 +40,7 @@ const CRUDActions = {
     if (!this._preSearchData) {
       return;
     }
-    const searchdata = this._preSearchData.filter(row => {
+    const searchdata = this._preSearchData.filter((row) => {
       for (let f = 0; f < fields.length; f++) {
         if (row[fields[f]].toString().toLowerCase().indexOf(needle) > -1) {
           return true;
@@ -63,10 +62,9 @@ const CRUDActions = {
   },
 
   sort(key: string, descending: boolean) {
-    CRUDStore.setData(CRUDStore.getData().sort(
-      (a, b) => this._sortCallback(a[key], b[key], descending)
-    ));
-  }
+    CRUDStore.setData(CRUDStore.getData().sort((a, b) =>
+      this._sortCallback(a[key], b[key], descending)));
+  },
 
   /* ... */
 
