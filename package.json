@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --devtool eval --progress --colors --hot",
-    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress -p"
+    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress -p",
+    "qa": "flow"
   },
   "keywords": [],
   "author": "",

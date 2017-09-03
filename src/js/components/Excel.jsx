@@ -161,14 +161,14 @@ class Excel extends Component {
                       >
                         {content}
                       </td>
-                    )
+                    );
                   }, this)
                 }
-                <tb className="ExcelDataCenter">
+                <td className="ExcelDataCenter">
                   <Actions onAction={this._actionClick.bind(this, rowidx)}/>
-                </tb>
+                </td>
               </tr>
-            )
+            );
           }, this)
         }
         </tbody>
