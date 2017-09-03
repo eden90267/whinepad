@@ -1,0 +1,17 @@
+[ignore]
+.*/react/node_modules/.*
+.*/fbemitter/node_modules/.*
+.*/node_modules/fbjs/.*
+
+[include]
+node_modules/react
+node_modules/react-dom
+node_modules/classnames
+node_modules/fbemitter
+node_modules/invariant
+node_modules/immutable
+
+[libs]
+
+[options]
+module.name_mapper='.*\(.sass\)' -> 'empty/object'
